@@ -1,0 +1,8 @@
+﻿@using BaseDatosMusica.Services.Specification
+@model System.Collections.Generic.IEnumerable<BaseDatosMusica.Models.Colaboracione>
+
+        @foreach (var item in Model)
+        {
+                    @await Component.InvokeAsync("Artistas", new ArtistaSpecification() { artistaId = (int)item.ArtistasId })
+        }
+

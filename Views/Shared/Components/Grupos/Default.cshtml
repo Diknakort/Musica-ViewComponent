@@ -1,0 +1,11 @@
+﻿@using BaseDatosMusica.Services.Specification
+@model System.Collections.Generic.IEnumerable<BaseDatosMusica.Models.Grupo>
+
+<table class="table">
+
+    <tbody>
+    @foreach (var item in Model) {
+            @await Component.InvokeAsync("Colaboradores", new ColaboradoresSpecification() { grupoId = (int)item.Id })
+            }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BaseDatosMusica.ViewModels.DiscosSinCancionesViewModel>
+
+@{
+    ViewData["Title"] = "Discos Sin Canciones";
+}
+
+<h1>Discos Sin Canciones</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreDisco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td></td>
+                <td>
+                    @foreach (var hijo in item.DiscoHuerfano)
+                    {
+                        @Html.DisplayFor(modelItem => item.NombreDisco)
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
