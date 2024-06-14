@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BaseDatosMusica.Views.Shared.Components.Grupos.GrupoArtistasYRolesViewModel>
+
+@{
+    ViewData["Title"] = "ViewGruposArtistaRoles";
+}
+
+<table class="table">
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.NombreArtista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreRol)
+            </td>
+           
+
+        </tr>
+}
+    </tbody>
+</table>

@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using BaseDatosMusica.ViewModels;
 using BaseDatosMusica;
+using BaseDatosMusica.Models;
+using BaseDatosMusica.Views.Shared.Components.Grupos;
 
 namespace BaseDatosMusica.Models;
 
@@ -159,5 +160,7 @@ public partial class GrupoDContext : DbContext
 
 public DbSet<BaseDatosMusica.ViewModels.DiscosSinCancionesViewModel> DiscoSinCancionesViewModel { get; set; } = default!;
 
-public DbSet<BaseDatosMusica.ViewModels.GrupoArtistasYRolesViewModel> GrupoArtistasYRolesViewModel { get; set; } = default!;
+public DbSet<GrupoArtistasYRolesViewModel> GrupoArtistasYRolesViewModel { get; set; } = default!;
+
+public DbSet<BaseDatosMusica.Models.GruposArtistasRoles> GruposArtistasRoles { get; set; } = default!;
 }

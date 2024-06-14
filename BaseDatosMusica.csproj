@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <Folder Include="Services\Especificaciones\" />
-    <Folder Include="Views\GruposArtistasRoles\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,7 +35,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Shared\Components\GruposArtistasRoles\Default.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Shared\Components\Grupos\Default.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Shared\Components\GruposArtistasRoles\Default.cshtml" />
   </ItemGroup>
 
 </Project>

@@ -28,6 +28,7 @@ builder.Services.AddScoped<IGirasRepositorio, EFGirasRepositorio>();
 builder.Services.AddScoped(typeof(IGenericRepositorio<>), typeof(EFGenericRepositorio<>));
 builder.Services.AddScoped<IArtistaSpecification, ArtistaSpecification>();
 builder.Services.AddScoped<IColaboracionesSpecification, ColaboradoresSpecification>();
+builder.Services.AddScoped<IGrupoArtistaRolSpecification, GrupoArtistaRolSpecification>();
 builder.Services.AddScoped<IGrupoSpecification, GrupoSpecification>();
 
 

@@ -1,11 +1,39 @@
-﻿@using BaseDatosMusica.Services.Specification
-@model System.Collections.Generic.IEnumerable<BaseDatosMusica.Models.Grupo>
+﻿@model System.Collections.Generic.IEnumerable<BaseDatosMusica.Models.Colaboracione>
+
+@{
+    ViewData["Title"] = "ViewGruposArtistaRoles";
+}
 
 <table class="table">
-
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Artistas.NombreArtistico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artistas.RolPrincipalNavigation.Nombre)
+        </th>
+    </tr>
+    </thead>
     <tbody>
-    @foreach (var item in Model) {
-            @await Component.InvokeAsync("Colaboradores", new ColaboradoresSpecification() { grupoId = (int)item.Id })
-            }
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="2" class="text-center">
+                <span>No hay artistas asignados al grupo</span>
+            </td>
+        </tr>
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artistas.NombreArtistico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artistas.RolPrincipalNavigation.Nombre)
+            </td>
+        </tr>
+    }
     </tbody>
 </table>
